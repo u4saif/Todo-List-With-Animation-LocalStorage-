@@ -1,0 +1,19 @@
+ 
+	<h1>{{udata.mydata}}</h1>
+
+<h3 >Todos List </h3>
+
+<h4 id='l' for="inputvalue" class="list" >Add to-do work! </h4><br>
+
+<textarea [(ngModel)]='inputvalue' (keyUp.enter)='updateData()' id="inputvalue" > </textarea>
+
+<div @fade @fadein *ngFor='let item of showdata;index as i'>
+  <ul>
+	<li ><span id="sno"> {{i+1}})</span>{{item}}
+  <button id="x"(click)="remove(item)">X</button> 
+  </li>
+  
+</ul>
+</div>
+
+ 
